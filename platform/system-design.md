@@ -14,39 +14,11 @@ You are tasked with designing a distributed cache system to improve the performa
 
 ## Assignment
 
-Your task is to whiteboard the design of a distributed cache system that can effectively store and manage GitHub and GitLab data. Consider the following aspects in your design:
+Your task is to whiteboard the design of a distributed cache system that can effectively store and manage GitHub and GitLab data.
 
-1. **Cache Storage Technology**:
-   - Choose a suitable caching technology (e.g., Redis, Memcached) for storing GitHub and GitLab data in our conceptual product backend.
-   - Explain why you selected this technology and its advantages for this use case.
+Your team has a javascript UI that is making a call to an API which is then calling GitHub and GitLab, and the users are reporting rate limiting. The historical git data typically remains static and only the latest changes for a repo tend to be dynamic. The queries the team's API are using are already optimized.
 
-2. **Cache Data Structure**:
-   - Define the structure of data to be stored in the cache.
-   - Consider how to represent GitHub and GitLab data (e.g., repositories, commits) in the cache.
-
-3. **Cache Eviction Policies**:
-   - Design cache eviction policies to manage data expiration and eviction.
-   - Explain how you would handle scenarios where data becomes stale or needs to be removed from the cache.
-
-4. **Distributed Synchronization**:
-   - Describe how the cache system will handle synchronization in a distributed environment.
-   - Consider scenarios where multiple cache nodes need to be coordinated to maintain consistency.
-
-5. **Data Privacy and Security**:
-   - Address data privacy concerns and ensure that sensitive information is not exposed in the cache.
-   - Discuss any security measures or access controls in place to protect cached data.
-
-6. **Data Consistency**:
-   - Explain how the cache system will maintain data consistency between the cache and the source (GitHub and GitLab).
-   - Consider strategies for cache invalidation when the source data changes.
-
-7. **Cache Size and Scalability**:
-   - Discuss how the cache system will handle different cache sizes and scalability requirements.
-   - Consider load balancing and adding cache nodes to meet growing demands.
-
-8. **High Availability and Fault Tolerance**:
-   - Outline strategies for ensuring high availability and fault tolerance in the cache system.
-   - Describe how the system will handle node failures or network issues.
+With all this in mind, design a distributed cache system for the team that will significantly cut down on rate limiting.
 
 ## Submission
 
@@ -58,6 +30,5 @@ Your solution can be a whiteboard diagram or a written description of your cache
 - Consideration of cache technology, data structure, and eviction policies.
 - Handling of distributed synchronization and data privacy.
 - Strategies for ensuring data consistency and cache scalability.
-- Measures for high availability and fault tolerance.
 
 **Note:** This assignment assesses your system design skills, particularly in the context of caching and distributed systems. The goal is to create a robust and efficient cache system that enhances the performance of the GraphQL backend while addressing important considerations like data privacy and consistency. Good luck with the assignment!
